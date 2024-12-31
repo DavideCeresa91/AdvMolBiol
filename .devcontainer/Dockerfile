@@ -9,4 +9,8 @@ RUN apt-get update && apt-get install -y \
     figlet \
     && apt-get clean
 
+# Crea un utente chiamato "vscode"
+RUN useradd -ms /bin/bash vscode
 
+# Imposta l'utente di default
+USER vscode
