@@ -12,7 +12,7 @@
     "ms-python.python",
     "ms-toolsai.jupyter"
   ],
-  "postCreateCommand": "apt-get update && apt-get install -y toilet figlet",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y toilet figlet",
   "postStartCommand": "echo ' Genomics   Lab           Biotec           UniGe  ' | toilet -f big -F border",
   "forwardPorts": [3000, 8080],
   "remoteUser": "vscode"
