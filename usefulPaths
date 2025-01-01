@@ -1,0 +1,22 @@
+# genome assembly files address:
+
+# 1) fasta file:
+ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_47/GRCh38.primary_assembly.genome.fa.gz
+
+# 2) gtf file:
+ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_47/gencode.v47.annotation.gtf.gz
+
+# sequencing file addres
+https://drive.google.com/uc?id=1Rw60xrAZ92pSYArLDGib2hVkdO8Ve_WZ
+
+
+programs to be installed
+cutadapt bowtie2 subread samtools (apt)
+gdown (pip) 
+
+
+#seqkit install
+wget https://github.com/shenwei356/seqkit/releases/download/v2.3.1/seqkit_linux_amd64.tar.gz
+tar -zxvf seqkit_linux_amd64.tar.gz
+mv seqkit /usr/local/bin
+#
