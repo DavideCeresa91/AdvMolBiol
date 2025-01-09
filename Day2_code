@@ -1,0 +1,35 @@
+####DAY 2####
+#generate a variable called nChr containing the number of occurrences of “>chr” in human_genome.fa
+cd genome
+nChr=$(grep -c ">chr" human_genome.fa)
+echo $nChr
+#generate a variable called nSeq containing the number of occurrences of “>” in human_genome.fa
+nSeq=$(grep -c ">" human_genome.fa)
+echo $nSeq
+
+#print in the terminal the result of nSeq-nChr
+echo $(($nSeq-$nChr))
+
+#####Generating a FASTA reference containing only chromosome 18
+
+#retrieving the positon of first line of chromosome 18
+grep "chr18" chr_position.txt > chr18_position.txt
+head chr18_position.txt
+chr18start=$(cut -d":" -f 1 chr18_position.txt)
+
+#retrieving the positon of last line of chromosome 18 by using the chromosome 19 first line
+grep "chr19" chr_position.txt > chr19_position.txt
+head chr19_position.txt
+chr19start=$(cut -d":" -f 1 chr19_position.txt)
+chr18end=$(($chr19start-1))
+
+#generating the fasta  of chromosome 18
+head -n$chr18end human_genome.fa > chr18_intermediate.fa
+n=$((chr18end-chr18start+1))
+tail -n$n chr18_intermediate.fa > chr18.fa
+
+
+#downloading your assigned chromosome from repository:
+
+#SUBSTITUTE § SYMBOL WITH THE NUMBER OF YOUR ASSIGNED CHROMOSOME IN THE FOLLOWING LINE
+wget http://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/chr§.fa.gz
