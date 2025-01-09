@@ -1,0 +1,4 @@
+
+
+gdown "https://drive.google.com/uc?id=1RPLKCxV9vjA6AaF71hIDQsHSVfm8XuDD" -O nanopore_data.fastq.gz
+
