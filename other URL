@@ -1,4 +1,4 @@
 
-4th try!!!!!!!!!!!!!!!!!!!!!!!!
-gdown "https://drive.google.com/uc?id=1Sc_shjiv2PIg6bve5COQLTV3FZdPdIZS" -O nanopore_data.fastq.gz
+
+gdown "https://drive.google.com/uc?id=1l8BuJVw6go59ZbbdilWqP_j0UVCYy-U0" -O nanopore_data1.fastq.gz
 
