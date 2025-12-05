@@ -1,0 +1,14 @@
+{
+  "customizations": {
+    "vscode": {
+      "keybindings": [
+        {
+          "key": "ctrl+enter",
+          "command": "workbench.action.terminal.sendSequence",
+          "args": { "text": "${selectedText}${lineText}\u000D" },
+          "when": "editorTextFocus"
+        }
+      ]
+    }
+  }
+}
